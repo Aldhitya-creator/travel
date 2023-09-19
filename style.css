@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    position: relative;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("img/fuji.jpg");
+  
+    height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
