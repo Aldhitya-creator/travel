@@ -3,7 +3,7 @@ body{
     position: relative;
 }
 
-.parallax {
+.parallax1 {
     /* The image used */
     background-image: url("img/fuji.jpg");
   
@@ -14,4 +14,75 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+.parallax2 {
+    /* The image used */
+    background-image: url("img/mount.jpg");
+  
+    height: 50vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    
+}
+.card{
+    z-index: -1;
+}
+.card:hover {
+    background-color: rgb(); /* Anda dapat menyesuaikan nilai ini */
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.pic-ctn {
+  position: relative;
+  width: 640px;
+  height: 300px;
+  margin-top: 1vh;
+}
+
+.pic-ctn > img {
+  position: absolute;
+  top: 0;
+  max-height: 320px;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
 }
